@@ -1,0 +1,2 @@
+# python-check-manifest
+Are you a Python developer? Have you uploaded packages to the Python Package Index? Have you accidentally uploaded broken packages with some files missing? If so, check-manifest is for you.
