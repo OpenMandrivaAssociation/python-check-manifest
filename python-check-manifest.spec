@@ -2,17 +2,16 @@
 %global pypi_name check_manifest
 %define tarname	check-manifest
 %global with_python2 0
-%define version 0.37
 
 Name:           python-%{pypi_name}
-Version:        %{version}
-Release:        1
+Version:        0.39
+Release:	1
 Group:          Development/Python
 Summary:        Easy update of MANIFEST.in.Easy update of MANIFEST.in.
 
 License:        MIT
 URL:            https://github.com/mgedmin/check-manifest
-Source0:        https://files.pythonhosted.org/packages/49/ac/67d065556adcad8144cb51e9d8848006dc3a9f5da7491faaf7db6374e301/%{tarname}-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/7b/a9/1df7b7a07a1c224604cab18e27de9820b640e088c75f28cf7f77cfa17a72/check-manifest-0.39.tar.gz
 BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
