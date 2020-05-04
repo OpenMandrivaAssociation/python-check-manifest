@@ -4,14 +4,14 @@
 %global with_python2 0
 
 Name:           python-%{pypi_name}
-Version:	0.41
+Version:	0.42
 Release:	1
 Group:          Development/Python
 Summary:        Easy update of MANIFEST.in.Easy update of MANIFEST.in.
 
 License:        MIT
 URL:            https://github.com/mgedmin/check-manifest
-Source0:	https://files.pythonhosted.org/packages/d5/05/c055664f50026fcc256b554f35c07ccbd9447f4b13410a40b0440e555449/check-manifest-0.41.tar.gz
+Source0:	https://files.pythonhosted.org/packages/ee/8d/1f98cb6bf7bbee73e3ba333c39c0dd4585a334d20b4c7ba658ca12007311/check-manifest-0.42.tar.gz
 BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
