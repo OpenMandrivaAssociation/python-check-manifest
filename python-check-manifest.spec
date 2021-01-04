@@ -5,7 +5,7 @@
 
 Name:           python-%{pypi_name}
 Version:	0.45
-Release:	1
+Release:	2
 Group:          Development/Python
 Summary:        Easy update of MANIFEST.in.Easy update of MANIFEST.in.
 
