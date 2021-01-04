@@ -4,14 +4,14 @@
 %global with_python2 0
 
 Name:           python-%{pypi_name}
-Version:	0.42
+Version:	0.45
 Release:	1
 Group:          Development/Python
 Summary:        Easy update of MANIFEST.in.Easy update of MANIFEST.in.
 
 License:        MIT
 URL:            https://github.com/mgedmin/check-manifest
-Source0:	https://files.pythonhosted.org/packages/ee/8d/1f98cb6bf7bbee73e3ba333c39c0dd4585a334d20b4c7ba658ca12007311/check-manifest-0.42.tar.gz
+Source0:	https://files.pythonhosted.org/packages/ee/8d/1f98cb6bf7bbee73e3ba333c39c0dd4585a334d20b4c7ba658ca12007311/%{tarname}-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
@@ -21,7 +21,8 @@ BuildRequires:  python-sphinx
 BuildRequires:  python2-devel
 BuildRequires:  python2-setuptools
 BuildRequires:  python2-sphinx
-%endif # if with_python2
+%endif 
+#if with_python2
 
 
 %description
@@ -33,7 +34,8 @@ Summary:        Easy update of MANIFEST.in.
 
 %description -n python2-%{pypi_name}
 Tool for managing the python package manifest
-%endif # with_python2
+%endif 
+# with_python2
 
 
 %prep
@@ -55,7 +57,8 @@ find %{py2dir} -name '*.py' | xargs sed -i '1s|^#!python|#!%{__python2}|'
 # remove the sphinx-build leftovers
 #rm -rf html/.{doctrees,buildinfo}
 
-%endif # with_python2
+%endif 
+# with_python2
 
 
 %build
@@ -65,7 +68,8 @@ find %{py2dir} -name '*.py' | xargs sed -i '1s|^#!python|#!%{__python2}|'
 pushd %{py2dir}
 %{__python} setup.py build
 popd
-%endif # with_python2
+%endif 
+# with_python2
 
 
 %install
@@ -76,7 +80,8 @@ popd
 pushd %{py2dir}
 %{__python2} setup.py install --skip-build --root %{buildroot}
 popd
-%endif # with_python2
+%endif 
+# with_python2
 
 %{__python} setup.py install --skip-build --root %{buildroot}
 
@@ -92,5 +97,6 @@ popd
 %doc CHANGES.rst README.rst LICENSE.rst
 %{python2_sitelib}/%{pypi_name}.py
 %{python2_sitelib}/%{tarname}-%{version}-py?.?.egg-info/*
-%endif # with_python2
+%endif 
+# with_python2
 
