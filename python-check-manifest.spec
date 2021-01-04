@@ -1,6 +1,6 @@
 # Created by pyp2rpm-2.0.0
-%global pypi_name check_manifest
-%define tarname	check-manifest
+%global pypi_name check-manifest
+%define altpypi_name check_manifest
 %global with_python2 0
 
 Name:           python-%{pypi_name}
@@ -11,7 +11,7 @@ Summary:        Easy update of MANIFEST.in.Easy update of MANIFEST.in.
 
 License:        MIT
 URL:            https://github.com/mgedmin/check-manifest
-Source0:	https://files.pythonhosted.org/packages/ee/8d/1f98cb6bf7bbee73e3ba333c39c0dd4585a334d20b4c7ba658ca12007311/%{tarname}-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/ee/8d/1f98cb6bf7bbee73e3ba333c39c0dd4585a334d20b4c7ba658ca12007311/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
@@ -39,9 +39,9 @@ Tool for managing the python package manifest
 
 
 %prep
-%setup -q -n %{tarname}-%{version}
+%setup -q -n %{pypi_name}-%{version}
 # Remove bundled egg-info
-rm -rf %{tar_name}.egg-info
+rm -rf %{pypi_name}.egg-info
 
 # generate html docs 
 #sphinx-build -C docs/source html
@@ -88,15 +88,15 @@ popd
 
 %files
 %doc CHANGES.rst README.rst LICENSE.rst
-%{_bindir}/%{tarname}
-%{python_sitelib}/%{pypi_name}.py
-%{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info/*
+%{_bindir}/%{pypi_name}
+%{python_sitelib}/%{altpypi_name}.py
+%{python_sitelib}/%{altpypi_name}-%{version}-py?.?.egg-info/*
 %{python_sitelib}/__pycache__/*
 %if 0%{?with_python2}
 %files -n python2-%{pypi_name}
 %doc CHANGES.rst README.rst LICENSE.rst
-%{python2_sitelib}/%{pypi_name}.py
-%{python2_sitelib}/%{tarname}-%{version}-py?.?.egg-info/*
+%{python2_sitelib}/%{altpypi_name}.py
+%{python2_sitelib}/%{altpypi_name}-%{version}-py?.?.egg-info/*
 %endif 
 # with_python2
 
