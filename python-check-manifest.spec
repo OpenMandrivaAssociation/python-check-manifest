@@ -5,7 +5,7 @@
 
 Name:           python-%{pypi_name}
 Version:	0.45
-Release:	2
+Release:	3
 Group:          Development/Python
 Summary:        Easy update of MANIFEST.in.Easy update of MANIFEST.in.
 
@@ -62,7 +62,7 @@ find %{py2dir} -name '*.py' | xargs sed -i '1s|^#!python|#!%{__python2}|'
 
 
 %build
-%{__python} setup.py build
+%py3_build
 
 %if 0%{?with_python2}
 pushd %{py2dir}
@@ -83,7 +83,7 @@ popd
 %endif 
 # with_python2
 
-%{__python} setup.py install --skip-build --root %{buildroot}
+%py3_install
 
 
 %files
@@ -91,12 +91,14 @@ popd
 %{_bindir}/%{pypi_name}
 %{python_sitelib}/%{altpypi_name}.py
 %{python_sitelib}/%{altpypi_name}-%{version}-py?.?.egg-info/*
+%{python_sitelib}/%{altpypi_name}-%{version}-py?.?.egg-info/PKG-INFO
 %{python_sitelib}/__pycache__/*
 %if 0%{?with_python2}
 %files -n python2-%{pypi_name}
 %doc CHANGES.rst README.rst LICENSE.rst
 %{python2_sitelib}/%{altpypi_name}.py
 %{python2_sitelib}/%{altpypi_name}-%{version}-py?.?.egg-info/*
+%{python2_sitelib}/%{altpypi_name}-%{version}-py?.?.egg-info/PKG-INFO
 %endif 
 # with_python2
 
