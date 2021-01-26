@@ -4,14 +4,14 @@
 %global with_python2 0
 
 Name:           python-%{pypi_name}
-Version:	0.45
-Release:	3
+Version:	0.46
+Release:	1
 Group:          Development/Python
 Summary:        Easy update of MANIFEST.in.Easy update of MANIFEST.in.
 
 License:        MIT
 URL:            https://github.com/mgedmin/check-manifest
-Source0:	https://files.pythonhosted.org/packages/ee/8d/1f98cb6bf7bbee73e3ba333c39c0dd4585a334d20b4c7ba658ca12007311/%{pypi_name}-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/ff/bc/8271d03edf705a2ddd6226b0ce60b8d75e7fcc183c1ddabb9cd9e9c850c3/check-manifest-0.46.tar.gz
 BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
