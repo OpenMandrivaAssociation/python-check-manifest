@@ -10,7 +10,7 @@ Summary:        Easy update of MANIFEST.in
 
 License:        MIT
 URL:            https://github.com/mgedmin/check-manifest
-Source0:	https://files.pythonhosted.org/packages/ff/bc/8271d03edf705a2ddd6226b0ce60b8d75e7fcc183c1ddabb9cd9e9c850c3/check-manifest-0.46.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/c/check-manifest/check-manifest-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
