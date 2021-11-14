@@ -3,14 +3,14 @@
 %bcond_with python2
 
 Name:           python-%{pypi_name}
-Version:	0.46
-Release:	2
+Version:	0.47
+Release:	1
 Group:          Development/Python
 Summary:        Easy update of MANIFEST.in
 
 License:        MIT
 URL:            https://github.com/mgedmin/check-manifest
-Source0:	https://files.pythonhosted.org/packages/source/c/check-manifest/check-manifest-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/06/bf/19135a8e930f6d7fd3049a34ae5316c7870b0badd14f07dd53ba58c2bf93/check-manifest-0.47.tar.gz
 BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
