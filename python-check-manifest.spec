@@ -4,7 +4,7 @@
 
 Name:           python-%{pypi_name}
 Version:	0.47
-Release:	1
+Release:	2
 Group:          Development/Python
 Summary:        Easy update of MANIFEST.in
 
