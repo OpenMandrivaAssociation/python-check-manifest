@@ -1,6 +1,7 @@
 %global module check-manifest
 %define oname check_manifest
-%bcond tests 1
+# tests need a VCS installed to complete succesfully.
+%bcond tests 0
 
 Name:		python-check-manifest
 Version:	0.51
