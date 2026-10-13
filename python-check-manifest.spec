@@ -5,7 +5,7 @@
 
 Name:		python-check-manifest
 Version:	0.51
-Release:	1
+Release:	2
 License:	MIT
 Summary:	Tool to check the completeness of MANIFEST.in for Python packages
 Group:		Development/Python
